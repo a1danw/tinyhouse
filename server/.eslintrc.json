@@ -1,0 +1,22 @@
+{
+  // ESLint depends on a parser to read and translate JavaScript code for it to understand. The default ESLint parser (ESpree) doesn't recognize TypeScript code. The @typescript-eslint/parser is probably the most widely used and supported parser for TypeScript code, and the one installed in our app.
+  "parser": "@typescript-eslint/parser",
+  // The parserOptions configuration allows us to specify the language options we want ESLint to support. By default, ESLint supports ES5. We'll set the ecmaVersion to 2018 to allow us the use of modern ES features in our app. sourceType: module to declare that we're using ES6 modules in our app.
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  // The extends option allows us to extend the rules from a certain plugin with which we've picked @typescript-eslint/recommended.
+  "extends": ["plugin:@typescript-eslint/recommended"],
+  // env dictates which environment our ESLint script is expected to run. Every environment has its own set of particular global variables so we've stated that we're in the node environment.
+  "env": { "node": true },
+  // rules is where we can declare individual ESLint rules we want in our app. Here's where we can override the rules from the @typescript-eslint/recommended package we've extended.
+  // The @typescript-eslint/recommended package comes with a rule for indenting. Prettier will handle all indenting/formatting for us, and it's often recommended to turn off indent formatting rules as a result. We'll turn off the standard indent rule and the @typescript-eslint/indent rule.
+  "rules": {
+    "indent": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/explicit-function-return-type": "off"
+  }
+}
+
+// Currently, the ESLint VSCode Extension doesn't have TypeScript support enabled by default, and editor warnings are only shown for JS Files. To have ESLint work for TypeScript files, we'll need to add the following to the /settings.json file of our VSCode editor.

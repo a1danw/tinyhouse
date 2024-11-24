@@ -1,0 +1,9 @@
+npm i typescript ts-node -D
+npm i -D @types/node @types/express
+npm run build - code gets compiled to js from the index.ts file
+npm i apollo-server-express
+npm i graphql
+npm i -D @types/body-parser
+npm i -D @types/graphql
+
+curl -X POST http://localhost:9000/delete-listing -H 'Content-Type: application/json' -d '{"id":"001"}'

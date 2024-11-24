@@ -1,0 +1,18 @@
+{
+  // To customize and edit the options of the TypeScript compiler, we'll specify a compilerOptions key in our tsconfig.json file.
+  "compilerOptions": {
+    // We'll declare the target option which specifies the target JavaScript version the compiler will output. Here we'll declare a target output of es6 since Node supports a vast majority of ES6 features.
+    "target": "es6",
+    // We'll declare the module option which refers to the module manager to be used in the compiled JavaScript output. Since CommonJS is the standard in Node, we'll state commonjs as the module option.
+    "module": "commonjs",
+    // To specify the location of files for where we want to declare TypeScript code, we'll use the rootDir option and give a value of src/ to say we want our compiler to compile the Typescript code in the src/ folder.
+    "rootDir": "./src",
+    // We can use the outDir option to specify where we'd want to output the compiled code when we attempt to compile our entire TypeScript project into JavaScript. We'll dictate that we'll want this output code to be in a folder called build/.
+    "outDir": "./build",
+    // To help compile our CommonJS modules in compliance with ES6 modules, we'll need to introduce the esModuleInterop option and give it a value of true.
+    "esModuleInterop": true,
+    // Finally, we'll apply the strict option which enables a series of strict type checking options such as noImplicitAny, noImplicitThis, strictNullChecks, and so on.
+    "strict": true
+  },
+  "exclude": ["temp"]
+}

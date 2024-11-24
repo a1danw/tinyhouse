@@ -1,0 +1,27 @@
+npm run start
+. npm i typescript ts-node -D
+. npm i apollo-server-express graphql
+. tsconfig.json file - customise ts config
+. npm install -D @types/node @types/express @types/graphql
+
+@types
+For us to use third-party libraries (e.g. `express) and have the full power of TypeScript,
+these libraries should also have dynamic types. Unfortunately, a lot of third party libraries
+we might want to use can be written in native JavaScript (e.g. express or with an extension of JavaScript (e.g. CoffeeScript).
+
+This is where TypeScript allows for the creation and use of declaration files that describe the shape
+of existing JavaScript code. In the TypeScript community exists a DefinitelyTyped repository that holds
+TypeScript declaration files for a large number of packages and is entirely community-driven.
+
+npm run build
+"build": responsible for compiling/building the typescript code in our project to valid javascript
+tsc takes an option known as -p (--project) -p allows us to compile ts code in a project that contains ts config json file - requires a project directory argument which weve stated ./
+compiles all ts code in the ts project in the ./ directory
+"build": "tsc -p ./"
+--project
+
+compiles build folder - contains js code for index.js file which has been compiled from index.ts
+if we wanted to we could run the code with index.js to see that it still works
+the moment we are ready to complete our app and deploy it we will use the npm run build command
+we will place the bundle into any deployment process we want
+other than that we will hardly have any use for the build folder - apart from to see the generated compiled js code

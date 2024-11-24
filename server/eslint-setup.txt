@@ -1,0 +1,11 @@
+. Install eslint extension
+. Install the following for eslint within a typescript app:
+. npm install -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+. eslint package - core eslint library we use for linting
+. @typescript-eslint/parser - parse which allows eslint to lint ts code
+. @typescript-eslint/eslint-plugin - plugin when used in conjunction with ts eslint parser - 
+contains a bunch of ts specific eslint rules we'll use in our app
+
+. Similiarly how the tsconfig.json which is responsible for configuring the typescript compiler 
+  Eslintrc.json is responsbile for configuring the eslint setup of our app
+  eslint accepts different file setups - we can use .eslintrc.js, .eslintrc.yaml etc
